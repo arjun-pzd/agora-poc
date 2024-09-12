@@ -1,70 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Agora Video Call Service
 
-## Available Scripts
+This project is a React-based video call application using Agora.io. It demonstrates how to set up real-time video and audio communication with Agora, allowing users to join, leave, mute, and unmute during the call. The UI is styled with circular buttons for starting/ending calls and muting/unmuting audio, with a full-screen remote video and a smaller local video overlay.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Video Call**: Real-time video and audio using Agora.io.
+- **Local and Remote Streams**: Display local video in a small window over the remote video.
+- **UI Enhancements**: Circular buttons for starting/ending calls and muting/unmuting.
+- **Mute/Unmute**: Toggle the microphone during the video call.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requirements
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Node.js** and **npm**: Ensure you have Node.js installed (preferably the latest stable version).
+- **Agora.io Account**: You will need an Agora App ID and Token. Create an account at [Agora.io](https://www.agora.io) if you don't have one.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Clone the Repository
 
-### `npm run build`
+```bash
+git clone https://github.com/arjun-pzd/agora-poc.git
+cd agora-poc
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Install Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Set Up Agora Credentials
 
-### `npm run eject`
+- Create an account at [Agora.io](https://www.agora.io) and generate an App ID and Temporary Token for your project.
+- Update the Agora credentials in the `VideoCall.js` file:
+  
+```js
+const APP_ID = 'YOUR_APP_ID';
+const TOKEN = 'YOUR_TEMPORARY_TOKEN';
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Run the Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The app will be running at `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+### Joining a Call
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Click on the "Start Call" button to join the video call.
+- Your local video will appear as a small window on the top-right corner, while the remote video will take up the full screen.
+- You can mute/unmute your microphone by clicking the "Mute" button.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Leaving a Call
 
-### Code Splitting
+- Click the "End Call" button to leave the video call.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Customization
 
-### Analyzing the Bundle Size
+You can further customize this project by:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **UI Enhancements**: Modify the layout and design to suit your application's needs.
+2. **Token Management**: Implement server-side token generation for a more secure production environment.
 
-### Making a Progressive Web App
+## Agora Documentation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+For more information about Agora's features and APIs, refer to the [Agora Documentation](https://docs.agora.io/en/).
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
